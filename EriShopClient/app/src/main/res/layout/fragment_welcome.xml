@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="erihackton.com.aelaf.erishopclient.welcome.WelcomeActivityFragment"
+    tools:showIn="@layout/activity_welcome">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="107dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="serif-monospace"
+        android:text="Welcome To EriShop"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Welcome To EriShop" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:fontFamily="serif-monospace"
+        android:text="UserName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:text="UserName"
+        app:layout_constraintBottom_toBottomOf="@+id/edtUserName"
+        app:layout_constraintTop_toTopOf="@+id/edtUserName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
+        tools:text="Password"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPassword"
+        app:layout_constraintTop_toTopOf="@+id/edtPassword" />
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="54dp"
+        android:hint="UserName"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintLeft_toLeftOf="@+id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="24dp"
+        android:hint="***"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
+
+    <Button
+        android:id="@+id/buttLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="serif-monospace"
+        android:text="LOG IN"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        tools:text="Log In"
+        android:layout_marginLeft="148dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/buttRegister" />
+
+    <Button
+        android:id="@+id/buttRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif-monospace"
+        android:text="REGISTER"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttLogIn"
+        app:layout_constraintVertical_bias="0.354"
+        tools:text="Register" />
+</android.support.constraint.ConstraintLayout>
