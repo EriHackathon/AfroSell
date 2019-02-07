@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erihackton.shopping.productAdd.ProductAddActivityFragment"
+    tools:showIn="@layout/activity_product_add">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Description:"
+        app:layout_constraintBottom_toBottomOf="@+id/edtProductDescription"
+        app:layout_constraintLeft_toLeftOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/edtProductDescription"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:text="Product Description:" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Product Price:"
+        app:layout_constraintLeft_toLeftOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:layout_constraintTop_creator="1"
+        tools:text="Product Price:" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="Product Type:"
+        app:layout_constraintLeft_toLeftOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="Product Type:" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Category :"
+        app:layout_constraintBottom_toBottomOf="@+id/edtProductCat"
+        app:layout_constraintLeft_toLeftOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/edtProductCat"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:text="Product Category :" />
+
+    <EditText
+        android:id="@+id/edtProductCat"
+        android:layout_width="163dp"
+        android:layout_height="39dp"
+        android:hint="Enter product name"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtproductName"
+        app:layout_constraintLeft_toLeftOf="@+id/edtProductType"
+        tools:layout_editor_absoluteY="111dp"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Product Name :"
+        app:layout_constraintBottom_toBottomOf="@+id/edtproductName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtproductName"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:text="Product Name :" />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="41dp"
+        android:id="@+id/edtproductName"
+        android:hint="Enter product name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp"
+        app:layout_constraintLeft_toLeftOf="@+id/edtProductCat"
+        tools:layout_editor_absoluteY="36dp"
+        android:layout_marginLeft="0dp" />
+
+    <EditText
+        android:id="@+id/edtProductType"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:hint="Enter Product Type"
+        app:layout_constraintLeft_toLeftOf="@+id/edtProductPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        tools:layout_editor_absoluteY="165dp"
+        android:layout_marginLeft="0dp" />
+
+    <EditText
+        android:id="@+id/edtProductPrice"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:hint="Enter Product Price"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/edtProductDescription"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        tools:layout_editor_absoluteY="223dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="171dp"
+        android:layout_height="41dp"
+        android:hint="enter the description"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductPrice"
+        android:layout_marginRight="6dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="7dp"
+
+        android:id="@+id/edtProductDescription"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <Button
+        android:id="@+id/buttAddProduct"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:text="Add Product"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtProductDescription"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="122dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="364dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+</android.support.constraint.ConstraintLayout>
