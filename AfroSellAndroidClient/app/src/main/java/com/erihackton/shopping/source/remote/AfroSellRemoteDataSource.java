@@ -4,6 +4,8 @@ import android.util.Log;
 
 import com.erihackton.shopping.model.Product;
 import com.erihackton.shopping.source.DataSource;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
@@ -21,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AfroSellRemoteDataSource implements DataSource {
     public static final String TAG = "AfroSellRemote";
-    public static final String baseUrl = "http://192.168.43.114:8000";
+    public static final String baseUrl = "http://192.168.43.114:3300";
     private static Retrofit retrofit = null;
     public static AfroSellRemoteDataSource INSTANCE;
     private  AfroAPIInterface afroAPIInterface ;
@@ -32,10 +34,12 @@ public class AfroSellRemoteDataSource implements DataSource {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                .create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build();
 
@@ -79,20 +83,37 @@ public class AfroSellRemoteDataSource implements DataSource {
 
     @Override
     public void addProduct(Product pro, final AddProductCallBack addProductCallBack) {
-    final Call<String> productCall =  afroAPIInterface.addProduct(pro);
-       productCall.enqueue(new Callback<String>() {
+    final Call<Void> productCall =  afroAPIInterface.addProduct(pro);
+        productCall.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                Log.d(TAG, "onSuccess"+response.body());
+                Log.d(TAG, "onResponse: "+call.toString());
+                addProductCallBack.onSuccess(response.body()+"added to n/w");
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable throwable) {
+                addProductCallBack.onError(throwable.getMessage()+"can't add to n/w");
+            }
+        });
+      /* productCall.enqueue(new Callback<String>() {
            @Override
            public void onResponse(Call<String> call, Response<String> response) {
-               Log.d(TAG, "onSuccess"+response.body());
-               addProductCallBack.onSuccess(response.body()+"added to n/w");
+
            }
 
            @Override
            public void onFailure(Call<String> call, Throwable throwable) {
                Log.d(TAG, "onFailure: "+throwable.getMessage());
-                addProductCallBack.onError(throwable.getMessage()+"can't add to n/w");
+               *//**
+                * TODO
+                * ADDING WORKS BUT FAILURE MESSAGE
+                * End of input at line 1 column 1 path $
+                *//*
+
            }
-       });
+       });*/
     }
 
     @Override
@@ -102,6 +123,11 @@ public class AfroSellRemoteDataSource implements DataSource {
 
     @Override
     public void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack) {
+
+    }
+
+    @Override
+    public void addProducts(List<Product> product, AddProductsCallBack addProductsCallBack) {
 
     }
 }

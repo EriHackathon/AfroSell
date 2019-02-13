@@ -51,11 +51,12 @@ public class AfroSellLocalDataSource implements DataSource{
 
             Product product = new Product(productName,productPrice);
             product.setProductId(c.getInt(c.getColumnIndexOrThrow("product_id")));
+            product.setProductCategory(c.getString(c.getColumnIndexOrThrow("product_category")));
             product.setProductType(c.getString(c.getColumnIndexOrThrow("product_type")));
             product.setProductDiscription(c.getString(c.getColumnIndexOrThrow("product_description")));
             product.setProductImage(c.getString(c.getColumnIndexOrThrow("product_image")));
-            product.setDateCreated(new Date(c.getString(c.getColumnIndexOrThrow("date_created"))));
-            product.setDateDeleted(new Date(c.getString(c.getColumnIndexOrThrow("date_deleted"))));
+            product.setDateCreated(null);
+            product.setDateDeleted(null);
         //IDIOTA!!!
             productList.add(product);
 
@@ -104,5 +105,38 @@ public class AfroSellLocalDataSource implements DataSource{
     @Override
     public void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack) {
 
+    }
+
+    @Override
+    public void addProducts(List<Product> productList, AddProductsCallBack addProductsCallBack) {
+        Log.d(TAG, "addProducts: ");
+        /**
+         * TODO
+         * batch updating sqlite with auto-increment issue
+         */
+        SQLiteDatabase db = afroSellDbHelper.getWritableDatabase();
+        for (Product pro:
+             productList) {
+            ContentValues cn = new ContentValues();
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_NAME,pro.getProductName());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_PRICE,pro.getPrice());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_CATEGORY,pro.getProductCategory());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID,pro.getProductId());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_IMAGE,pro.getProductImage());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DESCRIPTION,pro.getProductDiscription());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_CREATED, String.valueOf(pro.getDateCreated()));
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_DELETED, String.valueOf(pro.getDateDeleted()));
+
+           long result = db.insertWithOnConflict(AfroSellLocalColumnContract.DbEntry.PRODUCT_TABLE_NAME,null,cn,SQLiteDatabase.CONFLICT_REPLACE);
+            cn.clear();
+            if (result==-1) {
+                addProductsCallBack.onError("failed Updating sqlite");
+                return;
+            }
+        }
+        addProductsCallBack.onSuccess("sucessfully updated sqlite");
+
+
+        db.close();
     }
 }

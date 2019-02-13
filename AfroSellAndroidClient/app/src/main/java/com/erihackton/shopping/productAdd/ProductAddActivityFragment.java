@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.erihackton.shopping.ActivityUtil;
 import com.erihackton.shopping.afrosellandroidclient.R;
 import com.erihackton.shopping.model.Product;
 import com.erihackton.shopping.product.ProductActivityFragment;

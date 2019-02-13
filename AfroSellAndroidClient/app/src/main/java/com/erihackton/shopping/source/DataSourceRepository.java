@@ -43,7 +43,12 @@ public static final String TAG = "DataSource";
             public void onSuccess(List<Product> productList) {
                 //no need for n/w call
                 Log.d(TAG, "onSuccess: d/b "+productList.size());
-                getAllProductsCallBack.onSuccess(productList);  
+                getAllProductsCallBack.onSuccess(productList);
+                /**
+                 * TODO
+                 * FUTURE FEATURE
+                 * CHECK FOR  CONNECTION AND REQUEST FOR UPDATE
+                 */
             }
 
             @Override
@@ -52,9 +57,22 @@ public static final String TAG = "DataSource";
                 //need for n/w call
                 afroSellRemoteDataSource.getAllProducts(new GetAllProductsCallBack() {
                     @Override
-                    public void onSuccess(List<Product> productList) {
+                    public void onSuccess(final List<Product> productList) {
                         Log.d(TAG, "onSuccess: n/w");
-                        getAllProductsCallBack.onSuccess(productList);
+                        //adding into sqlite
+                        afroSellLocalDataSource.addProducts(productList, new AddProductsCallBack() {
+                            @Override
+                            public void onSuccess(String result) {
+                                Log.d(TAG, "onSuccess: adding list of products  to sqlite "+result);
+                                getAllProductsCallBack.onSuccess(productList);
+                            }
+
+                            @Override
+                            public void onError(String err) {
+                                Log.d(TAG, "onError:can not add fetched data to sqlite "+err);
+                                getAllProductsCallBack.onError(err);
+                            }
+                        });
                     }
 
                     @Override
@@ -112,6 +130,11 @@ public static final String TAG = "DataSource";
 
     @Override
     public void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack) {
+
+    }
+
+    @Override
+    public void addProducts(List<Product> product, AddProductsCallBack addProductsCallBack) {
 
     }
 }
