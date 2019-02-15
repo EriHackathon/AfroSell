@@ -1,7 +1,7 @@
 ppackage com.erihackton.shopping.pro;
 /*
  * This class is about product controller class 
- * developed by Dawit Tekle
+ * developed by Dawit Tekle 
  */
 import java.util.List;
 
