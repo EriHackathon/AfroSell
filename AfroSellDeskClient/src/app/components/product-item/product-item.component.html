@@ -1,0 +1,16 @@
+<div class="panel panel-default col-md-4 {{ productItem }} ">
+<div #nameId>
+    {{ productItem.productName }}
+  </div>
+  <br>
+  price:
+    {{ productItem.price | currency }}
+  <br>
+  product Type:
+  {{ productItem.productType }}
+  <br>
+  <button type="button" (click)="delete(productItem)"> Delete</button>
+  <br>
+  <button type="button" (click)="edit(productItem)"> Edit</button>
+</div>
+

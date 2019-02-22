@@ -98,7 +98,8 @@ public static final String TAG = "DataSource";
             public void onSuccess(String result) {
                 Log.d(TAG, "onSuccess:on n/w "+result);
                // addProductCallBack.onSuccess(result);
-                //then add into local
+                //then add into local !!! access from network
+                //expect Remote response Data
                 afroSellLocalDataSource.addProduct(pro, new AddProductCallBack() {
                     @Override
                     public void onSuccess(String result) {
@@ -124,13 +125,68 @@ public static final String TAG = "DataSource";
     }
 
     @Override
-    public void updateProduct(Product pro, int id, UpdateProductCallBack updateProductCallBack) {
+    public void updateProduct(final Product pro, final UpdateProductCallBack updateProductCallBack) {
+        afroSellRemoteDataSource.updateProduct(pro, new UpdateProductCallBack() {
+            @Override
+            public void onSuccess(String result) {
+                //remote success
+                Log.d(TAG, "onSuccess from Remote: "+result);
+                //update local
+                afroSellLocalDataSource.updateProduct(pro, new UpdateProductCallBack() {
+                    @Override
+                    public void onSuccess(String result) {
+                        //local success
+                        Log.d(TAG, "onSuccess:from Db "+result);
+                        updateProductCallBack.onSuccess(result);
+                    }
+
+                    @Override
+                    public void onError(String err) {
+                            //local Error
+                        Log.d(TAG, "onError:from Db "+err);
+                        updateProductCallBack.onError(err);
+                    }
+                });
+            }
+
+            @Override
+            public void onError(String err) {
+                //remote fail
+                Log.d(TAG, "onError: from Remote "+err);
+            }
+        });
 
     }
 
     @Override
-    public void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack) {
+    public void deleteProduct(final int id, final DeleteProductCallBack deleteProductCallBack) {
+        Log.d(TAG, "deleteProduct: init");
+        afroSellRemoteDataSource.deleteProduct(id, new DeleteProductCallBack() {
+            @Override
+            public void onSuccess(String result) {
+                Log.d(TAG, "onSuccess: delete from n/w");
+                //going to local delete
+                afroSellLocalDataSource.deleteProduct(id, new DeleteProductCallBack() {
+                    @Override
+                    public void onSuccess(String result) {
+                        Log.d(TAG, "onSuccess: delete on n/w");
+                        deleteProductCallBack.onSuccess(result);
+                    }
 
+                    @Override
+                    public void onError(String err) {
+                        Log.d(TAG, "onError: "+err);
+                        deleteProductCallBack.onError(err);
+                    }
+                });
+            }
+
+            @Override
+            public void onError(String err) {
+                Log.d(TAG, "onError: on n/w "+err);
+                deleteProductCallBack.onError(err);
+            }
+        });
     }
 
     @Override

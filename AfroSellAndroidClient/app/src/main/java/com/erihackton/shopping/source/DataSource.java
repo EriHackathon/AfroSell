@@ -47,7 +47,7 @@ public interface DataSource {
 
     void addProduct(Product pro,AddProductCallBack addProductCallBack);
 
-    void updateProduct(Product pro, int id,UpdateProductCallBack updateProductCallBack);
+    void updateProduct(Product pro,UpdateProductCallBack updateProductCallBack);
 
     void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack);
     void addProducts(List<Product> product,AddProductsCallBack addProductsCallBack);

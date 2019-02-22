@@ -1,5 +1,16 @@
-<h1>List of Products</h1>
-<ul *ngFor="let product of productList">
-{{ product.productName }} -- ${{ product.price }}
 
-</ul>
+
+<span *ngIf="productListError">
+     <h3>😢😔 products can not be displayed 😢😔</h3>
+</span>
+<span *ngIf="productListError ==false">
+
+  <div class="container">
+    <h1>List of Products</h1>
+    <div class="panel-group row" *ngFor="let product of productList">
+        <app-product-item [productItem]='product'>
+
+        </app-product-item>
+    </div>
+ </div>
+</span>

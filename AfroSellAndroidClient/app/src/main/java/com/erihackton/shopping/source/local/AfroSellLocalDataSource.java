@@ -85,6 +85,7 @@ public class AfroSellLocalDataSource implements DataSource{
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_CATEGORY,pro.getProductCategory());
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID,pro.getProductId());
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_IMAGE,pro.getProductImage());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_TYPE,pro.getProductType());
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DESCRIPTION,pro.getProductDiscription());
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_CREATED, new Date().toString());
         cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_DELETED,new Date().toString());
@@ -98,13 +99,46 @@ public class AfroSellLocalDataSource implements DataSource{
     }
 
     @Override
-    public void updateProduct(Product pro, int id, UpdateProductCallBack updateProductCallBack) {
+    public void updateProduct(Product pro, UpdateProductCallBack updateProductCallBack) {
 
+        SQLiteDatabase db = afroSellDbHelper.getWritableDatabase();
+
+        ContentValues cn = new ContentValues();
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_NAME,pro.getProductName());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_PRICE,pro.getPrice());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_CATEGORY,pro.getProductCategory());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID,pro.getProductId());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_IMAGE,pro.getProductImage());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_TYPE,pro.getProductType());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DESCRIPTION,pro.getProductDiscription());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_CREATED, new Date().toString());
+        cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_DELETED,new Date().toString());
+//"id = ?", new String[] {"1"}
+     long result =   db.update(AfroSellLocalColumnContract.DbEntry.PRODUCT_TABLE_NAME,cn,
+                AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID+" = ?",new String[]{pro.getProductId()+""});
+
+        if( result != -1){
+            updateProductCallBack.onSuccess("success from db");
+        }
+        else
+            updateProductCallBack.onError("Fail from db");
+        cn.clear();
+        db.close();
     }
 
     @Override
     public void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack) {
 
+        SQLiteDatabase db = afroSellDbHelper.getWritableDatabase();
+       long result = db.delete(AfroSellLocalColumnContract.DbEntry.PRODUCT_TABLE_NAME,
+                AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID+" = ?",
+                new String[]{id+""});
+        if (result != -1)
+            deleteProductCallBack.onSuccess("success from Db");
+        else
+            deleteProductCallBack.onError("Fail Deleting from Db");
+
+        db.close();
     }
 
     @Override
@@ -123,6 +157,7 @@ public class AfroSellLocalDataSource implements DataSource{
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_CATEGORY,pro.getProductCategory());
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_ID,pro.getProductId());
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_IMAGE,pro.getProductImage());
+            cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_TYPE,pro.getProductType());
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DESCRIPTION,pro.getProductDiscription());
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_CREATED, String.valueOf(pro.getDateCreated()));
             cn.put(AfroSellLocalColumnContract.DbEntry.COLUMN_PRODUCT_DATE_DELETED, String.valueOf(pro.getDateDeleted()));
