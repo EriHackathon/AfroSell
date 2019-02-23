@@ -8,8 +8,8 @@ import { Product } from '../../model/Product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-productList:Product[];
-productListError:boolean= false;
+productList: Product[];
+productListError = false;
   constructor(private ps: ProductService) { }
 
 
@@ -19,14 +19,20 @@ productListError:boolean= false;
     this.productList = products;
 
   },
-  (error)=>{
-  this.productListError =true;
-  console.log('products not found')}
+  (error) => {
+  this.productListError = true;
+  console.log('products not found'); }
   );
 
   }
-
-ngOnDestroy(): void{
-//unsubscribe eventEmitters and
-}
+  editProduct(product: Product) {
+    console.log('edit action...' + `${product.productName} - ${product.price}`);
+  }
+  deleteProduct(product: Product) {
+    console.log('delete action...' ) ;
+    this.ps.deleteProduct(product).subscribe(() => {
+       console.log('del worked');
+       this.productList = this.productList.filter(pro => pro.productId !== product.productId);
+    });
+  }
 }

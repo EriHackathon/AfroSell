@@ -7,8 +7,10 @@
 
   <div class="container">
     <h1>List of Products</h1>
-    <div class="panel-group row" *ngFor="let product of productList">
-        <app-product-item [productItem]='product'>
+    <div class="panel-group row" >
+        <app-product-item *ngFor="let product of productList" [productItem]='product'
+        (deleteProduct)="deleteProduct($event)"
+        (editProduct)="editProduct($event)">
 
         </app-product-item>
     </div>
