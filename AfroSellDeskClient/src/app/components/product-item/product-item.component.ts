@@ -7,6 +7,7 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit {
+  productToDe: Product;
 @Input() productItem: Product;
 @Output() deleteProduct: EventEmitter<Product> = new EventEmitter();
 @Output() editProduct: EventEmitter<Product> = new EventEmitter();
@@ -21,5 +22,11 @@ delete(product: Product): void {
 edit(product: Product): void {
   console.log('edit...' + product.productName);
   this.editProduct.emit(product) ;
+  this.productItemService.product = product;
+}
+ngOnDestroy(): void {
+  //Called once, before the instance is destroyed.
+  //Add 'implements OnDestroy' to the class.
+
 }
 }

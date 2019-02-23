@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from '../../services/product.service';
+import { ProductService } from '../../services/product.service';
+import { ProductAddComponent } from '../product-add/product-add.component' ;
 
 import { Product } from '../../model/Product';
 @Component({
@@ -10,7 +11,7 @@ import { Product } from '../../model/Product';
 export class ProductListComponent implements OnInit {
 productList: Product[];
 productListError = false;
-  constructor(private ps: ProductService) { }
+  constructor(private ps: ProductService, private pac: ProductAddComponent) { }
 
 
   ngOnInit() {
@@ -27,6 +28,7 @@ productListError = false;
   }
   editProduct(product: Product) {
     console.log('edit action...' + `${product.productName} - ${product.price}`);
+    this.pac.editProduct(product);
   }
   deleteProduct(product: Product) {
     console.log('delete action...' ) ;

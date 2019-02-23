@@ -31,7 +31,8 @@ import { ProductHeaderComponent } from './components/product-header/product-head
     FormsModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    ProductAddComponent
   ],
   bootstrap: [AppComponent]
 })

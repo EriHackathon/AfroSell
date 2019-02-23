@@ -15,6 +15,7 @@ const httpOptions = {
 export class ProductService {
 url = 'http://localhost:3300/products';
 productAdd: ProductAddComponent;
+product: Product;
 
   constructor(private http: HttpClient) { }
   getProducts(): Observable<Product[]> {

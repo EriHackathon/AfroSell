@@ -1,49 +1,47 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-md-6">
-
-
-  <form (ngSubmit) ="onSubmit(form)" #form="ngForm">
+    <div class="col-xs-12 col-md-6" (editProduct)="editProduct($event)">
+  <form (ngSubmit) ="onSubmit(form)" #form="ngForm" >
     <div class="form-group">
       <label for="ProductName">Product Name</label>
-      <input type="text" id="productName" name="productName" class="form-control" ngModel required
+      <input required [(ngModel)]="productName" name="productName" id="productName" type="text"  class="form-control"
       #productNameCtrl="ngModel">
       <span class="help-block" *ngIf="productNameCtrl.invalid && productNameCtrl.touched">Enter Product name</span>
     </div>
     <div class="form-group">
       <label for="ProductCategory">Product Category</label>
-      <input type="text" id="productCategory" name="productCategory" class="form-control" ngModel required
+      <input type="text" [(ngModel)]="productCategory"  id="productCategory" name="productCategory" class="form-control" ngModel required
              #productCategoryCtrl="ngModel">
       <span class="help-block" *ngIf="productCategoryCtrl.invalid && productCategoryCtrl.touched">Enter Category name</span>
     </div>
 
     <div class="form-group">
       <label for="ProductType">Product Type</label>
-      <input type="text" id="productType" name="productType" class="form-control" ngModel required
+      <input type="text" [(ngModel)]="productType" id="productType" name="productType" class="form-control" ngModel required
              #productTypeCtrl="ngModel">
       <span class="help-block" *ngIf="productTypeCtrl.invalid && productTypeCtrl.touched">Enter Product Type name</span>
     </div>
 
     <div class="form-group">
       <label for="ProductImage">Product Image</label>
-      <input type="text" id="productImage" name="productImage" class="form-control" ngModel required
+      <input [(ngModel)]="productImage" type="text"  id="productImage" name="productImage" class="form-control" ngModel required
              #productImageCtrl="ngModel">
       <span class="help-block" *ngIf="productImageCtrl.invalid && productImageCtrl.touched">Enter Product Image </span>
     </div>
 
     <div class="form-group">
       <label for="ProductPrice">Product Price</label>
-      <input type="number" id="productPrice" name="productPrice" class="form-control" ngModel>
+      <input [(ngModel)]="productPrice" type="number" id="productPrice" name="productPrice" class="form-control" ngModel>
     </div>
 
 
     <div class="form-group">
       <label for="ProductDiscription">Product Discription</label>
-      <input type="text" id="productDiscription" name="productDiscription" class="form-control input-lg" ngModel required
+      <input [(ngModel)]="productDiscription" type="text" id="productDiscription" name="productDiscription" class="form-control input-lg" ngModel required
              #productDiscriptionCtrl="ngModel">
       <span class="help-block" *ngIf="productDiscriptionCtrl.invalid && productDiscriptionCtrl.touched">Enter Product Description </span>
     </div>
-    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Add Product</button>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">{{addEdit}}</button>
 
   </form>
     </div>
