@@ -24,9 +24,5 @@ edit(product: Product): void {
   this.editProduct.emit(product) ;
   this.productItemService.product = product;
 }
-ngOnDestroy(): void {
-  //Called once, before the instance is destroyed.
-  //Add 'implements OnDestroy' to the class.
 
-}
 }

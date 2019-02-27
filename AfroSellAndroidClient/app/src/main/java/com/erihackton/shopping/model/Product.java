@@ -10,6 +10,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
+import okhttp3.ResponseBody;
+
 /**
  * Created by aelaf on 2/5/19.
  */

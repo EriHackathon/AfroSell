@@ -1,6 +1,8 @@
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/pro/ProductRepository.java
+/home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/exceptions/ProductNotFoundException.java
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/pro/ProductServices.java
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/ProductApplication.java
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/pro/IProductServices.java
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/pro/Product.java
+/home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/exceptions/ProductExceptionController.java
 /home/aelaf/Documents/AppProject/AfroSell/product/src/main/java/com/erihackton/shopping/pro/ProductController.java

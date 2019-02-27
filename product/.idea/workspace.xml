@@ -2,44 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1cfc1d-bfab-4d55-99a7-dd52ebf45d18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/model/Actions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/drawable-anydpi/ic_delete.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/drawable-anydpi/ic_mode_edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/menu/menu_contextual.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/domain/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/domain/DeleteProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/domain/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/domain/UpdateProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/CustomProductAdaptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/CustomProductAdaptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductActivityFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductActivityFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/product/ProductPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddActivityFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddActivityFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/DataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/DataSourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/DataSourceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/local/AfroSellLocalDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/local/AfroSellLocalDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/remote/AfroAPIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/remote/AfroAPIInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/remote/AfroSellRemoteDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/source/remote/AfroSellRemoteDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ThorAxe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/WeaponMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/ProductApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/ProductApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/pro/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/pro/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/demo/ProductProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/demo/ProductProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,13 +21,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/product$ProductApplication.ic" NAME="ProductApplication Coverage Results" MODIFIED="1551162005309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.erihackton.shopping.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2002#2003#0" expanded="true" />
+                <element signature="e#2055#2056#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="165">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#253#254#0" expanded="true" />
                 <element signature="e#320#321#0" expanded="true" />
@@ -63,25 +64,79 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="165">
+              <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state>
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/WeaponMaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ThorAxe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding>
+                <element signature="e#373#374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Weapon</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -89,15 +144,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ThorAxe.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/WeaponMaker.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="/opt/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -109,15 +168,25 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="product" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="product" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="product" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="49" />
-    <option name="width" value="1346" />
-    <option name="height" value="699" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="12" />
+    <option name="y" value="78" />
+    <option name="width" value="1338" />
+    <option name="height" value="690" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -148,7 +217,39 @@
               <item name="product" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="pro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="product" type="b2602c69:ProjectViewProjectNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="product" type="b2602c69:ProjectViewProjectNode" />
@@ -180,9 +281,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550209048472" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551168923914" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AfroSellDeskClient" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -195,6 +303,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.erihackton.shopping.ProductApplication" />
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.erihackton.shopping.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProductApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -219,9 +347,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="49" width="1346" height="699" extended-state="0" />
+    <frame x="-1" y="28" width="1368" height="741" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27265745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2839879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -230,23 +358,24 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51757187" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.399361" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32820514" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3258786" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.20127796" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.32872504" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.22280967" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32930514" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,17 +419,137 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/pro/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/pro/Product.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/pro/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/exceptions/ProductNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/IProductServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/exceptions/ProductExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shop/product/product/ProductApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.2.RELEASE/spring-boot-2.1.2.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="208" column="9" lean-forward="true" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-jpa/2.1.2.RELEASE/spring-boot-starter-data-jpa-2.1.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/WeaponMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ThorAxe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -311,23 +560,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="146">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>product</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.1.2.RELEASE</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
