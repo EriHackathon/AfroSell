@@ -27,11 +27,11 @@ product: Product;
     return this.http.post(this.url, product, httpOptions);
   }
 
-  editProduct(product: Product): void {
+  editProduct(product: Product): Observable<any> {
     const finUrl = `${this.url}/${product.productId}` ;
     console.log(finUrl) ;
     // this.productAdd.
-    this.http.put(finUrl, product, httpOptions);
+    return this.http.put(finUrl, product, httpOptions);
   }
 
   deleteProduct(product: Product): Observable<any> {

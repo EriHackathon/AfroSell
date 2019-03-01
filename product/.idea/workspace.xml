@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1cfc1d-bfab-4d55-99a7-dd52ebf45d18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ThorAxe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/WeaponMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erihackton/shopping/ProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/ProductApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/ProductApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/pro/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/erihackton/shopping/pro/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/demo/ProductProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/demo/ProductProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-add/product-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-add/product-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,10 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="-600">
               <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="195">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#253#254#0" expanded="true" />
@@ -106,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
@@ -349,7 +341,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="741" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2839879" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28776434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,7 +355,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3258786" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3258786" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.20127796" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -489,18 +481,6 @@
         <state relative-caret-position="-945" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -510,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/demo/ProductProjectApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="195">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#253#254#0" expanded="true" />
@@ -564,6 +544,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

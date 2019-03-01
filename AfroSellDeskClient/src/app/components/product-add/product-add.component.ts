@@ -21,6 +21,7 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit() {
       if (this.prodService.product !== undefined) {
+
       this.productName = this.prodService.product.productName;
       this.productCategory = this.prodService.product.productCategory;
       this.productType = this.prodService.product.productType ;
@@ -28,14 +29,18 @@ export class ProductAddComponent implements OnInit {
       this.productPrice = this.prodService.product.price;
       this.productDiscription = this.prodService.product.productDiscription;
       this.addEdit = 'Edit' ;
+    } else {
+      this.addEdit = 'Add';
     }
   }
 onSubmit(submittedValue): void {
+  
 if (submittedValue.invalid) {
   return;
 }
 console.log('what');
 console.log(submittedValue.value);
+
 this.prod.productName = submittedValue.value.productName;
 this.prod.productType = submittedValue.value.productType;
 this.prod.productImage = submittedValue.value.productImage;
@@ -44,11 +49,19 @@ this.prod.productDiscription = submittedValue.value.productDiscription;
 this.prod.price = submittedValue.value.productPrice ;
 this.prod.productName = submittedValue.value.productName;
 
+if (this.addEdit === 'Edit') {
+  this.prod.productId = this.prodService.product.productId ;
+  this.prodService.editProduct(this.prod).subscribe( res => {
+    console.log('done Editing');
+    this.addResult = 'done editing';
+  });
+} else {
+  this.prodService.addProduct(this.prod).subscribe( res => {
+    console.log('done adding');
+    this.addResult = 'done adding';
+  });
+}
 
-this.prodService.addProduct(this.prod).subscribe( res => {
-  console.log('done adding');
-  this.addResult = 'done adding';
-});
 }
 editProduct(product: Product): void {
   console.log('editing on add page!!');

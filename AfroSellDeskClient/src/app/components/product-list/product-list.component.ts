@@ -32,6 +32,7 @@ productListError = false;
   }
   deleteProduct(product: Product) {
     console.log('delete action...' ) ;
+    //server
     this.ps.deleteProduct(product).subscribe(() => {
        console.log('del worked');
        this.productList = this.productList.filter(pro => pro.productId !== product.productId);
