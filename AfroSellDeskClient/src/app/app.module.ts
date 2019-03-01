@@ -14,6 +14,7 @@ import { ProductService } from './services/product.service';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { ProductHeaderComponent } from './components/product-header/product-header.component';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { ProductHeaderComponent } from './components/product-header/product-head
     HttpClientModule,
     FormsModule
   ],
+  exports: [MatButtonModule, MatCheckboxModule],
   providers: [
     ProductService
   ],
