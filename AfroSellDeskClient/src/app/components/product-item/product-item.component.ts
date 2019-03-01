@@ -23,6 +23,7 @@ edit(product: Product): void {
   console.log('edit...' + product.productName);
   this.editProduct.emit(product) ;
   this.productItemService.product = product;
+  this.productItemService.addEdit = true;
 }
 
 }

@@ -4,14 +4,19 @@
   <form (ngSubmit) ="onSubmit(form)" #form="ngForm" >
     <div class="form-group">
       <label for="ProductName">Product Name</label>
-      <input required [(ngModel)]="productName" name="productName" id="productName" type="text"  class="form-control"
+      <input required [(ngModel)]="productName" name="productName" required minlength="5" id="productName" type="text"  class="form-control"
       #productNameCtrl="ngModel">
-      <span class="help-block" *ngIf="productNameCtrl.invalid && productNameCtrl.touched">Enter Product name</span>
+      <span class="help-block" *ngIf="productNameCtrl.invalid && productNameCtrl.touched">
+         
+        <span class="help-block" *ngIf="productNameCtrl.errors.required">Product name is needed</span>
+        <span class="help-block" *ngIf="productNameCtrl.errors.minlength"> minimum character  5 is needed</span>
+      </span>
     </div>
     <div class="form-group">
       <label for="ProductCategory">Product Category</label>
       <input type="text" [(ngModel)]="productCategory"  id="productCategory" name="productCategory" class="form-control" ngModel required
              #productCategoryCtrl="ngModel">
+             <!--check if user touched and left it empty instance of form controller is **Ctrl-->
       <span class="help-block" *ngIf="productCategoryCtrl.invalid && productCategoryCtrl.touched">Enter Category name</span>
     </div>
 

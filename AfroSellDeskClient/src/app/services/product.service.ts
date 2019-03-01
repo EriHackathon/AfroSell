@@ -16,6 +16,7 @@ export class ProductService {
 url = 'http://localhost:3300/products';
 productAdd: ProductAddComponent;
 product: Product;
+addEdit: boolean;
 
   constructor(private http: HttpClient) { }
   getProducts(): Observable<Product[]> {
@@ -37,7 +38,7 @@ product: Product;
   deleteProduct(product: Product): Observable<any> {
     console.log(product.productName + 'deleting');
     const finUrl = `${this.url}/${product.productId}` ;
-    return this.http.delete(finUrl, httpOptions) ;   
+    return this.http.delete(finUrl, httpOptions) ;
   }
 
 }
