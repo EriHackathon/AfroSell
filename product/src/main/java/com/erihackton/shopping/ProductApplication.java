@@ -9,9 +9,7 @@ public class ProductApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(ProductApplication.class, args);
-		WeaponMaker weaponMaker = context.getBean(WeaponMaker.class);
-
-		System.out.println(weaponMaker.thorAxe.getName());
+		
 
 	}
 

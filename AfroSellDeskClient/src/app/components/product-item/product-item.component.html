@@ -1,7 +1,14 @@
 <div class="panel panel-default col-md-4 {{ productItem }} ">
-<div #nameId>
-    {{ productItem.productName }}
-  </div>
+  <mat-card class="product-item">
+    <mat-card-header>
+      <mat-card-title>
+          <div #nameId>
+              {{ productItem.productName }}
+            </div>
+      </mat-card-title>
+    </mat-card-header>
+  <mat-card-content>
+
   <br>
   price:
     {{ productItem.price | currency }}
@@ -12,5 +19,8 @@
   <button type="button" (click)="delete(productItem)"> Delete</button>
   <br>
   <button type="button" (click)="edit(productItem)"> Edit</button>
-</div>
 
+</mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>
+</div>

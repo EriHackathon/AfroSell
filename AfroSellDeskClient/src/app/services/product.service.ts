@@ -25,13 +25,14 @@ addEdit: boolean;
   }
 
   addProduct(product: Product): Observable<any> {
+    console.log('adding on server');
     return this.http.post(this.url, product, httpOptions);
   }
 
   editProduct(product: Product): Observable<any> {
+
     const finUrl = `${this.url}/${product.productId}` ;
     console.log(finUrl) ;
-    // this.productAdd.
     return this.http.put(finUrl, product, httpOptions);
   }
 

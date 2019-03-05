@@ -1,60 +1,80 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12 col-md-6" (editProduct)="editProduct($event)">
-  <form (ngSubmit) ="onSubmit(form)" #form="ngForm" >
-    <div class="form-group">
-      <label for="ProductName">Product Name</label>
-      <input required [(ngModel)]="productName" name="productName" required minlength="5" id="productName" type="text"  class="form-control"
-      #productNameCtrl="ngModel">
-      <span class="help-block" *ngIf="productNameCtrl.invalid && productNameCtrl.touched">
+<form [formGroup] ="formProduct" (ngSubmit)="onSubmit()" class="form-class">
+<mat-card class="product-card">
+  <mat-card-header>  
+    <mat-card-title>Product Form</mat-card-title>
+  </mat-card-header>
+  <mat-error *ngIf="formProduct.errors">Error on Submit</mat-error>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="partial-width">
+          <input matInput  placeholder="Product Name" formControlName="productName">
+          
+          <mat-error *ngIf="formProduct.get('productName').touched && formProduct.get('productName').invalid">
          
-        <span class="help-block" *ngIf="productNameCtrl.errors.required">Product name is needed</span>
-        <span class="help-block" *ngIf="productNameCtrl.errors.minlength"> minimum character  5 is needed</span>
-      </span>
+             <div *ngIf="formProduct.get('productName').errors.required"> Product Name is <strong>required</strong></div>
+             <!-- <div *ngIf="formProduct.get('productName').errors.noSpace">  limit reached </div> -->
+              </mat-error>
+         
+          </mat-form-field>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="ProductCategory">Product Category</label>
-      <input type="text" [(ngModel)]="productCategory"  id="productCategory" name="productCategory" class="form-control" ngModel required
-             #productCategoryCtrl="ngModel">
-             <!--check if user touched and left it empty instance of form controller is **Ctrl-->
-      <span class="help-block" *ngIf="productCategoryCtrl.invalid && productCategoryCtrl.touched">Enter Category name</span>
-    </div>
-
-    <div class="form-group">
-      <label for="ProductType">Product Type</label>
-      <input type="text" [(ngModel)]="productType" id="productType" name="productType" class="form-control" ngModel required
-             #productTypeCtrl="ngModel">
-      <span class="help-block" *ngIf="productTypeCtrl.invalid && productTypeCtrl.touched">Enter Product Type name</span>
-    </div>
-
-    <div class="form-group">
-      <label for="ProductImage">Product Image</label>
-      <input [(ngModel)]="productImage" type="text"  id="productImage" name="productImage" class="form-control" ngModel required
-             #productImageCtrl="ngModel">
-      <span class="help-block" *ngIf="productImageCtrl.invalid && productImageCtrl.touched">Enter Product Image </span>
-    </div>
-
-    <div class="form-group">
-      <label for="ProductPrice">Product Price</label>
-      <input [(ngModel)]="productPrice" type="number" id="productPrice" name="productPrice" class="form-control" ngModel>
-    </div>
-
-
-    <div class="form-group">
-      <label for="ProductDiscription">Product Discription</label>
-      <input [(ngModel)]="productDiscription" type="text" id="productDiscription" name="productDiscription" class="form-control input-lg" ngModel required
-             #productDiscriptionCtrl="ngModel">
-      <span class="help-block" *ngIf="productDiscriptionCtrl.invalid && productDiscriptionCtrl.touched">Enter Product Description </span>
-    </div>
-    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">{{addEdit}}</button>
-
-  </form>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <h4>{{addResult}}</h4>
-    </div>
-  </div>
-
-</div>
+    <div class="row">
+        <div class="col">
+          <mat-form-field class="partial-width">
+            <input matInput placeholder="Product Category"  formControlName="productCategory">
+            <mat-error *ngIf="formProduct.controls['productCategory'].hasError('required')">
+                Product Category is <strong>required</strong>
+               
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Product Type"  formControlName="productType">
+              <mat-error *ngIf="formProduct.controls['productType'].hasError('required')">
+                  Product Type is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Product Image"  formControlName="productImage">
+              <mat-error *ngIf="formProduct.controls['productImage'].hasError('required')">
+                  Product Image is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <mat-form-field class="partial-width">
+                <input matInput placeholder="Product Price" type="number"  formControlName="price">
+                <mat-error *ngIf="formProduct.controls['price'].hasError('required')">
+                    Product Price is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <mat-form-field class="partial-width">
+                  <textarea matInput placeholder="Product Description"  formControlName="productDiscription"></textarea>
+                  <mat-error *ngIf="formProduct.controls['productDiscription'].hasError('required')">
+                      Product Description is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="formProduct.invalid">Submit</button>
+      </mat-card-actions>
+  </mat-card>
+</form>
