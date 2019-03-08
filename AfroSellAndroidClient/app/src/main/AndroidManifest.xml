@@ -26,6 +26,7 @@
             android:label="@string/title_activity_welcome"
             android:parentActivityName="com.erihackton.shopping.product.ProductActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.erihackton.shopping.product.ProductActivity" />
