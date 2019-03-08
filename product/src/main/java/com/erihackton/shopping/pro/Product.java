@@ -17,7 +17,7 @@ public class Product {
 	 private Date dateCreated,dateDeleted;
 	 
 	 public Product() {
-		 
+
 	 }
 	 public Product(int productId, String productName, String productCategory, String productType, double price,
 				String productImage, String productDiscription, Date dateCreated, Date dateDeleted) {

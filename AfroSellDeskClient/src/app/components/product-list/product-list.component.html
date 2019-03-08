@@ -1,18 +1,28 @@
 
 
-<span *ngIf="productListError">
-     <h3>😢😔 products can not be displayed 😢😔</h3>
-</span>
-<span *ngIf="productListError ==false">
+<mat-card *ngIf="productListError">
+    
+     <mat-card>
+        <mat-card-title>Basic grid list</mat-card-title>
+        <mat-card-content >
+            <h3>😢😔 products can not be displayed 😢😔</h3>
+        </mat-card-content>
+      </mat-card>
+</mat-card>
+<mat-card *ngIf="productListError ==false">
 
-  <div class="container">
-    <h1>List of Products</h1>
-    <div class="panel-group row" >
-        <app-product-item *ngFor="let product of productList" [productItem]='product'
-        (deleteProduct)="deleteProduct($event)"
-        (editProduct)="editProduct($event)">
+    <mat-card-title>List of Products</mat-card-title>
+
+    <mat-card-content >
+      <mat-grid-list cols="2" rowHeight="200px">
+        <mat-grid-tile *ngFor="let product of productList"
+        >
+        <app-product-item  (deleteProduct)="deleteProduct($event)"
+        (editProduct)="editProduct($event)" [productItem]='product'>
 
         </app-product-item>
-    </div>
- </div>
-</span>
+      </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  
+</mat-card>

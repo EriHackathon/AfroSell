@@ -226,10 +226,14 @@ public class ProductActivityFragment extends Fragment implements ProductContract
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Product pro = data.getParcelableExtra(Constants.PRODUCT_INTENT_OBJECT);
-        Log.d(TAG, "onActivityResult: " + pro.getProductName());
-        Log.d(TAG, "onActivityResult: from frag!!!");
-        showUpdateProduct(pro);
+        Log.d(TAG, "onActivityResult: "+resultCode);
+        if(resultCode!=0) {
+
+            Product pro = data.getParcelableExtra(Constants.PRODUCT_INTENT_OBJECT);
+            Log.d(TAG, "onActivityResult: " + pro.getProductName());
+            Log.d(TAG, "onActivityResult: from frag!!!");
+            showUpdateProduct(pro);
+        }
     }
 
 
