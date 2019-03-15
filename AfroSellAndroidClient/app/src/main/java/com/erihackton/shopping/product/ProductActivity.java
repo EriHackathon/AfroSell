@@ -21,7 +21,13 @@ public class ProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        ProductActivityFragment productActivityFragment =
+                (ProductActivityFragment) getSupportFragmentManager().findFragmentById(R.id.productfragment);
+        mUseCaseHandler = UseCaseHandler.getInstance();
+        ActivityUtil.addFragmentToActivity(getSupportFragmentManager(),productActivityFragment,R.id.productfragment);
+        if (productActivityFragment==null)
+            productActivityFragment =  ProductActivityFragment.getInstance();
+        mPresenter =  new ProductPresenter(this,mUseCaseHandler,productActivityFragment);
 
 
 
@@ -30,12 +36,6 @@ public class ProductActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        ProductActivityFragment productActivityFragment =
-                (ProductActivityFragment) getSupportFragmentManager().findFragmentById(R.id.productfragment);
-        mUseCaseHandler = UseCaseHandler.getInstance();
-        ActivityUtil.addFragmentToActivity(getSupportFragmentManager(),productActivityFragment,R.id.productfragment);
-        if (productActivityFragment==null)
-            productActivityFragment =  ProductActivityFragment.getInstance();
-        mPresenter =  new ProductPresenter(this,mUseCaseHandler,productActivityFragment);
+
     }
 }

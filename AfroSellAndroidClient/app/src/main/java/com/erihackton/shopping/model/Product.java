@@ -1,5 +1,9 @@
 package com.erihackton.shopping.model;
 
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+
+import com.erihackton.shopping.ActivityUtil;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
@@ -14,10 +18,11 @@ public class Product {
     private String productName;
     private String productCategory;
     private String  productType ;
-    @SerializedName("productPrice")
+
     private double price;
     private String productImage;
     private String productDiscription;
+    @Nullable
     private Date dateCreated,dateDeleted;
  //   private Rank mRank;
 

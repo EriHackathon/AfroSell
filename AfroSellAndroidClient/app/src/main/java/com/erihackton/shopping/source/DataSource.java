@@ -35,6 +35,10 @@ public interface DataSource {
         void onSuccess(String result);
         void onError(String err);
     }
+    interface AddProductsCallBack{
+        void onSuccess(String result);
+        void onError(String err);
+    }
     void getAuthenticUser(String name, String password,getAuthenticUserCallBack getAuthenticUserCallBack);
 
    void getAllProducts(GetAllProductsCallBack getAllProductsCallBack);
@@ -46,4 +50,5 @@ public interface DataSource {
     void updateProduct(Product pro, int id,UpdateProductCallBack updateProductCallBack);
 
     void deleteProduct(int id, DeleteProductCallBack deleteProductCallBack);
+    void addProducts(List<Product> product,AddProductsCallBack addProductsCallBack);
 }

@@ -23,8 +23,8 @@ import retrofit2.http.Query;
     @GET("/product?id")
     Call<Product> getProduct(@Query("id") int id);
 
-    @POST("/addproduct")
-    Call<String> addProduct(@Body Product product);
+    @POST("/products")
+    Call<Void> addProduct(@Body Product product);
 
     @POST("/updateProduct")
     Call<Product> updateProduct(@Body Product product,@Query("id") int id);

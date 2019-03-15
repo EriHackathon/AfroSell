@@ -15,6 +15,7 @@ public class AfroSellDbHelper extends SQLiteOpenHelper {
     private static final String TEXT_TYPE = " TEXT";
 
     private static final String INT_TYPE = " INTEGER";
+    private static final String UNIQUE = " ";
 
     private static final String REAL_TYPE = " REAL";
 
