@@ -73,7 +73,7 @@
             </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Cancel</button>
+      <button mat-button (click)="onCancel()">Cancel</button>
         <button mat-raised-button color="primary" [disabled]="formProduct.invalid">Submit</button>
       </mat-card-actions>
   </mat-card>

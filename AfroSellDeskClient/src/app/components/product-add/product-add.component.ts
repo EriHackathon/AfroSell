@@ -79,6 +79,8 @@ editProduct(product: Product): void {
   console.log('editing on add page!!');
   this.router.navigate(['productAdd']);
 }
-
+onCancel(): void {
+  console.log('cancel...');
+}
 
 }

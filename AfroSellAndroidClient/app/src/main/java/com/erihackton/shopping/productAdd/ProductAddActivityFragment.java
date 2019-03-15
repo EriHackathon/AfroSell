@@ -58,8 +58,6 @@ public class ProductAddActivityFragment extends Fragment implements ProductAddCo
     public ProductAddActivityFragment() {
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -100,7 +98,6 @@ public class ProductAddActivityFragment extends Fragment implements ProductAddCo
                 String  productType = edtProductType.getText().toString().trim();
                 String productDescription = edtproductDescription.getText().toString().trim();
                 Product product = new Product(productName,productPrice);
-
                 product.setProductCategory(productCategory);
                 product.setProductType(productType);
                 product.setProductDiscription(productDescription);

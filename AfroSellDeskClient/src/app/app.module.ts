@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material';
+
 
 
 import { NgModule } from '@angular/core';
@@ -17,6 +17,9 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductHeaderComponent } from './components/product-header/product-header.component';
 import { AfroNavComponent } from './components/afro-nav/afro-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     ProductItemComponent,
     ProductAddComponent,
     ProductHeaderComponent,
-    AfroNavComponent
+      AfroNavComponent,
+      ProductDetailComponent,
+      SignInComponent,
+      SignUpComponent
   ],
   imports: [
     BrowserModule,

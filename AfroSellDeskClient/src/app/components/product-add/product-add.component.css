@@ -4,6 +4,9 @@ border: 1.5px solid red;
 
 .form-class{
   margin: 40px auto;
+  margin-left: 25%;
+  margin-right: 30%;
+  margin-bottom: 3%;
 }
 
 .partial-width {

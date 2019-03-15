@@ -34,7 +34,7 @@ productListError = false;
     console.log('delete action...' ) ;
     //server
     this.ps.deleteProduct(product).subscribe(() => {
-       console.log('del worked');
+       console.log('deleting worked on server');
        this.productList = this.productList.filter(pro => pro.productId !== product.productId);
     });
   }

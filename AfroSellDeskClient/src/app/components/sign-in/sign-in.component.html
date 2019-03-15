@@ -1,0 +1,42 @@
+<form [formGroup] ="formSignIn" (ngSubmit)="onSignIn()" class="form-class">
+  <mat-card class="signIn-card">
+    <mat-card-header>  
+      <mat-card-title>Sign In Form</mat-card-title>
+    </mat-card-header>
+
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="partial-width">
+            <input matInput  placeholder="User Name" formControlName="userName">
+            
+            <mat-error *ngIf="formSignIn.controls['userName'].hasError('required')">
+           
+               <div *ngIf="formSignIn.get('userName').errors.required"> User Name is <strong>required</strong></div>
+               
+                </mat-error>
+           
+            </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Password"  formControlName="password">
+              <mat-error *ngIf="formSignIn.controls['password'].hasError('required')">
+                  Password is <strong>required</strong>
+                 
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        
+          
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="onCancel()">Clear</button>
+          <button mat-raised-button color="primary" [disabled]="formSignIn.invalid">Sign In</button>
+        </mat-card-actions>
+    </mat-card>
+  </form>

@@ -22,11 +22,11 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_product_add_x);
+        setContentView(R.layout.activity_welcome);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setupFloatingLabelError();
-       /* WelcomeActivityFragment activityFragment =
+
+        WelcomeActivityFragment activityFragment =
                 (WelcomeActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentWelcome);
         if (activityFragment == null) {
             // Create the fragment
@@ -35,39 +35,8 @@ public class WelcomeActivity extends AppCompatActivity {
 
         }
         mUseCaseHandler = UseCaseHandler.getInstance();
-welcomePresenter = WelcomePresenter.getInstance(this,mUseCaseHandler,activityFragment);*/
+welcomePresenter = WelcomePresenter.getInstance(this,mUseCaseHandler,activityFragment);
     }
-    private void setupFloatingLabelError() {
-        final TextInputLayout floatingProductName = (TextInputLayout) findViewById(R.id.productNameX_text_input_layout);
-       final  EditText edt =(EditText) findViewById(R.id.productNameX);
-        int val;
-        floatingProductName.getEditText().addTextChangedListener(new TextWatcher() {
-            // ...
-            @Override
-            public void onTextChanged(CharSequence text, int start, int count, int after) {
-                if (text.length() > 0 && text.length() <= 4) {
-                    floatingProductName.setError("Product Name needed");
-                    floatingProductName.setErrorEnabled(true);
-                } else {
-                    floatingProductName.setErrorEnabled(false);
-                    Toast.makeText(WelcomeActivity.this,floatingProductName.getEditText().getText().toString(),Toast.LENGTH_LONG).show();
-                    Toast.makeText(WelcomeActivity.this,"*"+edt.getText().toString(),Toast.LENGTH_LONG).show();
 
-                }
-            }
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-                // TODO Auto-generated method stub
-                Log.d(TAG, "beforeTextChanged: ");
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-                Log.d(TAG, "afterTextChanged: ");
-            }
-        });
-    }
 
 }
