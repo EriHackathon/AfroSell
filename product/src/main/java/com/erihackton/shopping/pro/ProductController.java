@@ -1,4 +1,5 @@
-package com.erihackton.shopping.pro;
+
+ppackage com.erihackton.shopping.pro;
 /*
  * This class is about product controller class 
  * developed by Dawit Tekle
