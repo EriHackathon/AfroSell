@@ -20,6 +20,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
+import { RouteGuard} from './guards/RouteGuard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
       AfroNavComponent,
       ProductDetailComponent,
       SignInComponent,
-      SignUpComponent
+      SignUpComponent,
+      HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
   ],
   providers: [
     ProductService,
-    ProductAddComponent
+    ProductAddComponent,
+    RouteGuard
   ],
   bootstrap: [AppComponent]
 })

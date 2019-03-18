@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-sign-in',
+  // selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })

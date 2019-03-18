@@ -6,9 +6,12 @@ border: 1.5px solid red;
     margin: 40px auto;
     margin-left: 25%;
     margin-right: 30%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
-  
+  .form-signUp{
+    margin-left: 30%;
+    margin-right: 30%;
+  }
   .partial-width {
       width: 50%;
     }

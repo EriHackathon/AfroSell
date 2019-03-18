@@ -5,21 +5,29 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import {SignInComponent} from './components/sign-in/sign-in.component';
 import {SignUpComponent} from './components/sign-up/sign-up.component';
+import {HomeComponent} from './components/home/home.component';
+import {RouteGuard} from './guards/RouteGuard';
 const routes: Routes = [
-  { path: '',
-  component: ProductListComponent
-  },
-  {
-    path: 'product', redirectTo: '', pathMatch: 'full'
-  },
-  {
-    path: 'product-detail/:id',
-    component: ProductDetailComponent
-  },
-{
-path: 'productAdd',
-component: ProductAddComponent
-},
+  { path: '', component: HomeComponent,
+    canActivate: [RouteGuard],
+   children: [
+    { path: '', component: ProductListComponent},
+    { path: 'product-detail/:id', component: ProductDetailComponent},
+    { path: 'productAdd', component: ProductAddComponent}
+    ]
+
+}
+  // {
+  //   path: 'home',
+  //   component: HomeComponent
+  //   // children: [
+  //   // // { path: '', redirectTo: 'product', pathMatch: 'full'},
+  //   // { path: 'product', component: ProductListComponent},
+  //   // { path: 'product-detail/:id', component: ProductDetailComponent},
+  //   // { path: 'productAdd', component: ProductAddComponent}
+  //   // ]
+  // },
+,
 {
   path: 'signIn',
   component: SignInComponent
@@ -29,7 +37,9 @@ component: ProductAddComponent
   component: SignUpComponent
 }
 ];
-
+export const routeRoutedComponents = [
+  HomeComponent
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
