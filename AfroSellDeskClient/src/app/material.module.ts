@@ -16,7 +16,7 @@ MatDividerModule, MatGridListModule } from '@angular/material';
         MatListModule,
         MatDividerModule,
         MatGridListModule
-    ],
+        ],
     exports: [ MatDialogModule,
         MatInputModule,
         MatButtonModule,

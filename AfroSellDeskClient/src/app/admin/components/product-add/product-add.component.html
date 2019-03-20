@@ -10,11 +10,9 @@
       <div class="col">
         <mat-form-field class="partial-width">
           <input matInput  placeholder="Product Name" formControlName="productName">
-          
-          <mat-error *ngIf="formProduct.get('productName').touched && formProduct.get('productName').invalid">
+                <mat-error *ngIf="formProduct.controls['productName'].hasError('required')">
+                   Product Name is <strong>required</strong>
          
-             <div *ngIf="formProduct.get('productName').errors.required"> Product Name is <strong>required</strong></div>
-             <!-- <div *ngIf="formProduct.get('productName').errors.noSpace">  limit reached </div> -->
               </mat-error>
          
           </mat-form-field>

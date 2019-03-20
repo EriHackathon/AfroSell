@@ -10,10 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductService } from './services/product.service';
-import { ProductItemComponent } from './components/product-item/product-item.component';
-import { ProductAddComponent } from './components/product-add/product-add.component';
 import { ProductHeaderComponent } from './components/product-header/product-header.component';
 import { AfroNavComponent } from './components/afro-nav/afro-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -22,12 +19,11 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { RouteGuard} from './guards/RouteGuard';
+import { AdminModule } from './admin/admin.module';
+import { ServiceModule } from './services/service.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ProductItemComponent,
-    ProductAddComponent,
     ProductHeaderComponent,
       AfroNavComponent,
       ProductDetailComponent,
@@ -43,11 +39,12 @@ import { RouteGuard} from './guards/RouteGuard';
     FormsModule,
     ReactiveFormsModule,
     LayoutModule,
-    MaterialModule
+    MaterialModule,
+    AdminModule,
+    ServiceModule
   ],
   providers: [
     ProductService,
-    ProductAddComponent,
     RouteGuard
   ],
   bootstrap: [AppComponent]

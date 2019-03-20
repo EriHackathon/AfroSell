@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router' ;
 
 import {FormGroup, Validators, FormBuilder} from '@angular/forms';
-import { ProductService } from '../../services/product.service' ;
-import { Product } from '../../model/Product' ;
-import { ProductFormValidators } from './product.validator';
+import { ProductService } from '../../../services/product.service' ;
+import { Product } from '../../../model/Product' ;
 
 
 
@@ -77,7 +76,7 @@ if (this.addEdit) {
 }
 editProduct(product: Product): void {
   console.log('editing on add page!!');
-  this.router.navigate(['productAdd']);
+  this.router.navigateByUrl('admin/productAdd');
 }
 onCancel(): void {
   console.log('cancel...');

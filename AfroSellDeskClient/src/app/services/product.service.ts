@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../model/Product';
 import { Observable } from 'rxjs';
-import { ProductAddComponent } from '../components/product-add/product-add.component';
+import { ProductAddComponent } from '../admin/components/product-add/product-add.component';
 
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
-}
+};
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +16,7 @@ export class ProductService {
 url = 'http://localhost:3300/products';
 productAdd: ProductAddComponent;
 product: Product;
-addEdit: boolean;
+addEdit: boolean = false;
 
   constructor(private http: HttpClient) { }
   getProducts(): Observable<Product[]> {
