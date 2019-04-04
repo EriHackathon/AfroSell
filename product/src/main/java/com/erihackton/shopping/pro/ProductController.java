@@ -3,7 +3,6 @@ package com.erihackton.shopping.pro;
  * This class is about product controller class
  * developed by Dawit Tekle
  */
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class ProductController {
         List<Product> listp;
 
         listp = productService.getAllProducts();
-        if (listp.size() == 0) throw new ProductNotFoundException();
+        if (listp.size() == 0) throw new ProductNotFoundException("Products are not found");
         return new ResponseEntity<>(listp, HttpStatus.OK);
 
     }
@@ -43,7 +42,7 @@ public class ProductController {
     @RequestMapping("/products/{id}")
     public ResponseEntity<Object> getProduct(@PathVariable int id) {
         Product p = productService.getProduct(id);
-        if (p == null) throw new ProductNotFoundException();
+        if (p == null) throw new ProductNotFoundException("Product Not Found ");
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 
@@ -53,10 +52,16 @@ public class ProductController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST, value = "/products")
-    public void addProduct(@RequestBody() Product pro) {
-        if (pro != null) {
+    public ResponseEntity<Object> addProduct(@RequestBody() Product pro) {
+        try {
             productService.addProduct(pro);
         }
+        catch(Exception ex) {
+            throw new ProductNotFoundException("Product is not Added");
+        }
+        return new ResponseEntity<>("Product are Added",HttpStatus.OK);
+
+
     }
 
 
@@ -67,8 +72,15 @@ public class ProductController {
     @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.PUT, value = "/products/{id}")
 
-    public void updateProduct(@RequestBody Product pro, @PathVariable int id) {
-        productService.updateProduct(pro, id);
+    public ResponseEntity<Object> updateProduct(@RequestBody Product pro,@PathVariable int id) {
+        try {
+            productService.updateProduct(pro,id);
+        }
+
+        catch(Exception ex) {
+            throw new ProductNotFoundException("Product cant be Updated");
+        }
+        return new ResponseEntity<>("Product updated Successfully ",HttpStatus.OK);
     }
 
     /*
@@ -77,8 +89,14 @@ public class ProductController {
      */
     @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.DELETE, value = "/products/{id}")
-    public void deleteTopic(@PathVariable int id) {
-        productService.deleteProduct(id);
+    public ResponseEntity<Object> deleteTopic(@PathVariable int id) {
+        try {
+            productService.deleteProduct(id);
+        }catch(Exception ex) {
+            throw new ProductNotFoundException("The Id is not Associated with any Product");
+        }
+        return new ResponseEntity<>("Product is deleted",HttpStatus.OK);
+
 
     }
 }

@@ -15,6 +15,7 @@ export class RouteGuard implements CanActivate {
       const currentUser = this.auth.currentUserValue;
       console.log(currentUser);
       if (currentUser) {
+        //if cuurent role
         if (route.data.roles && route.data.roles.indexOf(currentUser.role) === -1) {
           // role not authorised so redirect to home page
           this.router.navigate(['/signIn'], {

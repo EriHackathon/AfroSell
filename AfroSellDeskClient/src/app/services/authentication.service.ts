@@ -49,7 +49,7 @@ export class AuthenticationService {
             } else {
                 this.isLoggedIn = false;
             }
-            return this.isLoggedIn;
+            return user;
          }));
     }
     public isUserLoggedIn(): boolean {

@@ -36,9 +36,15 @@ private return = '';
 
   onSignIn(): void {
     // authentication on
-   this.auth.makeUserAuthentic(this.formSignIn.value).pipe(first()).subscribe(res => {
-    if (res) {
-      console.log('authentic...' + this.return);
+   this.auth.makeUserAuthentic(this.formSignIn.value).pipe(first()).subscribe(user => {
+    if (user && user.role) {
+      if (user.role === 'User') {
+        this.return = '/';
+      } else {
+        this.return = '/admin';
+      }
+
+      console.log('authentic...' + user.role);
       this.router.navigateByUrl(this.return);
     } else {
       this.formSignIn.setErrors({
@@ -46,7 +52,6 @@ private return = '';
       });
     }
    });
-   localStorage.setItem('afroUser', this.formSignIn.value.userName);
    console.log(this.formSignIn.value.userName);
   }
 
