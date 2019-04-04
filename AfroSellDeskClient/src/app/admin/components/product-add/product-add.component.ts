@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router' ;
 
 import {FormGroup, Validators, FormBuilder} from '@angular/forms';
@@ -20,10 +20,10 @@ export class ProductAddComponent implements OnInit {
   productImage: string;
   productDiscription: string;
   addResult  = '';
-  addEdit: boolean;
+  addEdit = false;
 
   constructor(private prodService: ProductService, private prod: Product, private formBuilder: FormBuilder, private router: Router) {
-    this.addEdit = this.prodService.addEdit ;
+   // this.addEdit = this.prodService.addEdit ;
     this.formProduct = this.formBuilder.group({
       productId: [null, null],
       productName: [null, Validators.required],
@@ -38,8 +38,11 @@ export class ProductAddComponent implements OnInit {
    }
 
     ngOnInit() {
-   if (this.prodService.addEdit) {
-        this.formProduct.setValue(this.prodService.product);
+      console.log('init...');
+      if (this.prodService.addEdit) {
+     console.log('tur?');
+     this.formProduct.setValue(this.prodService.product);
+     this.addEdit = true;
       } else {
         this.addEdit = false;
       }
@@ -47,7 +50,6 @@ export class ProductAddComponent implements OnInit {
   }
 
 onSubmit(submittedValue): void {
-
 
 if (this.addEdit) {
   this.prodService.editProduct(this.formProduct.value).subscribe( res => {
@@ -80,6 +82,17 @@ editProduct(product: Product): void {
 }
 onCancel(): void {
   console.log('cancel...');
+}
+ ngOnDestroy(): void {
+  // Called once, before the instance is destroyed.
+  // Add 'implements OnDestroy' to the class.
+  console.log('Product add detrory');
+  this.addEdit = false;
+  this.prodService.addEdit = false;
+  this.prodService.product = null;
+}
+isActive(): boolean {
+  return false;
 }
 
 }

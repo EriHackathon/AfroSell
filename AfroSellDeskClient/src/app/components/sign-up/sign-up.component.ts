@@ -9,7 +9,7 @@ import { User } from 'src/app/model/User';
 })
 export class SignUpComponent implements OnInit {
 formSignUp: FormGroup ;
-  constructor(private user: User,private formBuilder: FormBuilder) {
+  constructor(private user: User, private formBuilder: FormBuilder) {
     this.formSignUp = this.formBuilder.group({
       firstName: [null, Validators.required],
       lastName: [null, Validators.required],

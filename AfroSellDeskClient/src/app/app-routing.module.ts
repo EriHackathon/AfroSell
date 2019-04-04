@@ -5,25 +5,18 @@ import {SignInComponent} from './components/sign-in/sign-in.component';
 import {SignUpComponent} from './components/sign-up/sign-up.component';
 import {HomeComponent} from './components/home/home.component';
 import {RouteGuard} from './guards/RouteGuard';
+import {ProductListComponent} from './components/product-list/product-list.component';
+import { Role } from './model/Role';
 const routes: Routes = [
-  { path: '', component: HomeComponent,
+  { path: '', component: HomeComponent, canActivate: [RouteGuard],
+  data: {roles: [Role.User]},
    children: [
+      { path: '', component: ProductListComponent},
       { path: 'product-detail/:id', component: ProductDetailComponent}
 
     ]
 
-}
-  // {
-  //   path: 'home',
-  //   component: HomeComponent
-  //   // children: [
-  //   // // { path: '', redirectTo: 'product', pathMatch: 'full'},
-  //   // { path: 'product', component: ProductListComponent},
-  //   // { path: 'product-detail/:id', component: ProductDetailComponent},
-  //   // { path: 'productAdd', component: ProductAddComponent}
-  //   // ]
-  // },
-,
+},
 {
   path: 'signIn',
   component: SignInComponent

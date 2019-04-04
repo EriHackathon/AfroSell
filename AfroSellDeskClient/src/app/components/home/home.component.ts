@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Product } from 'src/app/model/Product';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,5 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+goToDetail(product: Product) {
+  console.log(product.productName + 'from home');
+}
 }

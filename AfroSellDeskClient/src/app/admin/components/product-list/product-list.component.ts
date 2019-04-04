@@ -23,7 +23,8 @@ productListError = false;
   },
   (error) => {
   this.productListError = true;
-  console.log('products not found'); }
+  const x: string = error as any;
+  console.log( x ); }
   );
 
   }

@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouteGuard } from '../guards/RouteGuard';
 @NgModule({
     imports: [
         BrowserModule,
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ProductItemComponent
         ],
         providers: [
-            ProductAddComponent
+            ProductAddComponent,
+            RouteGuard
           ],
     exports: [
         AdminComponent

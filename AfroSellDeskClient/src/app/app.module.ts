@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import { NgModule } from '@angular/core';
-import { HttpClientModule  } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
@@ -18,14 +18,21 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProductItemComponent} from './components/product-item/product-item.component';
+import {ProductListComponent} from './components/product-list/product-list.component';
+
 import { RouteGuard} from './guards/RouteGuard';
 import { AdminModule } from './admin/admin.module';
 import { ServiceModule } from './services/service.module';
+import { ProductAddComponent } from './admin/components/product-add/product-add.component';
+import { FakeBackEnd } from './helpers/fake-back-end';
 @NgModule({
   declarations: [
     AppComponent,
     ProductHeaderComponent,
       AfroNavComponent,
+      ProductListComponent,
+      ProductItemComponent,
       ProductDetailComponent,
       SignInComponent,
       SignUpComponent,
@@ -44,8 +51,13 @@ import { ServiceModule } from './services/service.module';
     ServiceModule
   ],
   providers: [
-    ProductService,
-    RouteGuard
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: FakeBackEnd,
+      multi: true
+      },
+    RouteGuard,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

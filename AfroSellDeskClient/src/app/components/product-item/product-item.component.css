@@ -1,0 +1,10 @@
+.product-item {
+
+    margin: 15px auto;
+    background-color:skyblue;
+}
+.mat-card-actions {
+    display: flex;
+    flex-direction: row;
+    
+  }

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Product } from '../model/Product';
 import { Observable } from 'rxjs';
+import { catchError, tap} from 'rxjs/operators';
 import { ProductAddComponent } from '../admin/components/product-add/product-add.component';
 
 const httpOptions = {
@@ -16,14 +17,26 @@ export class ProductService {
 url = 'http://localhost:3300/products';
 productAdd: ProductAddComponent;
 product: Product;
-addEdit: boolean = false;
+addEdit = false;
 
   constructor(private http: HttpClient) { }
+  private errorHandler(err: HttpErrorResponse) {
+   let errMsg: string ;
+   errMsg = err.error.status;
+  
+   return Observable.throw(errMsg);
+  }
   getProducts(): Observable<Product[]> {
-
-    return this.http.get<Product[]>(this.url);
+console.log('getting all products...');
+return this.http.get<Product[]>(this.url).pipe(
+      tap(data => data),
+      catchError(this.errorHandler));
   }
 
+  getProduct(productId: number): Observable<any> {
+    console.log('getting a product Detail');
+    return this.http.get<Product>(`${this.url}/${productId}`);
+  }
   addProduct(product: Product): Observable<any> {
     console.log('adding on server');
     return this.http.post(this.url, product, httpOptions);

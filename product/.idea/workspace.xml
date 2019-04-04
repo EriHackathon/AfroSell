@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1cfc1d-bfab-4d55-99a7-dd52ebf45d18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddActivityFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/productAdd/ProductAddActivityFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/welcome/WelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/welcome/WelcomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/welcome/WelcomeActivityFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/java/com/erihackton/shopping/welcome/WelcomeActivityFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/layout/fragment_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellAndroidClient/app/src/main/res/layout/fragment_welcome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/admin/admin-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/admin/components/product-add/product-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/admin/components/product-add/product-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-detail/product-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-detail/product-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/components/product-detail/product-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/app/services/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AfroSellDeskClient/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AfroSellDeskClient/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,6 +110,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="ClientSideCRUD" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -157,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -241,6 +254,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,6 +298,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.ProductApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -311,8 +326,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31495467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32401812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -327,8 +343,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32535884" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.7364217" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151056" side_tool="true" visible="true" weight="0.3402556" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49848944" visible="true" weight="0.3402556" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -492,6 +508,7 @@
         <state relative-caret-position="-945" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/Person.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -532,13 +549,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/erihackton/shopping/pro/Person.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,32 @@
+
+
+<mat-card *ngIf="productListError">
+    
+     <mat-card>
+        <mat-card-title>Notification!</mat-card-title>
+        <mat-card-content >
+            <h3>😢😔 products can not be displayed 😢😔</h3>
+        </mat-card-content>
+      </mat-card>
+</mat-card>
+<mat-card *ngIf="!productListError && !productList">
+  <mat-card-content >
+    <h3>Loading...😔</h3>
+</mat-card-content>
+</mat-card>
+<mat-card *ngIf="!productListError && productList ">
+
+    <mat-card-title>List of Products</mat-card-title>
+
+    <mat-card-content >
+      <mat-grid-list cols="2" rowHeight="200px">
+        <mat-grid-tile *ngFor="let product of productList"
+        >
+        <app-product-item  (addToCart)="addToCart($event)" (goToDetail)="goToDetail($event)" [productItem]='product'>
+
+        </app-product-item>
+      </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  
+</mat-card>
