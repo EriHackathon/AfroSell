@@ -11,6 +11,7 @@ export class User {
     userName: string;
     password: string;
     role: Role;
+    token: string;
     constructor(firstName: string, lastName: string){
       this.firstName = firstName;
       this.lastName = lastName;

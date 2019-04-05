@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="accent" >Menu</mat-toolbar>
+    <mat-toolbar color="accent" (click)="drawer.toggle()" >Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item [routerLink]="['/']">Home</a>
       <a mat-list-item [routerLink]="['/signUp']">Sign Up</a>
@@ -12,20 +12,26 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" (click)="drawer.toggle()">
+    <mat-toolbar color="primary" >
       <button class="col"
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
        
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset$ | async" (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="space"></span>
       <!-- <button mat-icon-button class="col">
         <mat-icon>more_vert</mat-icon>
       </button> -->
-       <button [routerLink]="['/admin']">Admin</button>     
+      <button mat-button [matMenuTriggerFor]="menu">{{profile }}</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/profile']">Profile</button>
+  <button mat-menu-item (click)="logOut()">Log Out</button>
+</mat-menu>
+
+       <button mat-button [routerLink]="['/admin']">Admin</button>     
     </mat-toolbar>
    
     <router-outlet></router-outlet>

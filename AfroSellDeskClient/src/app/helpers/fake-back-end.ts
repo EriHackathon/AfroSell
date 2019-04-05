@@ -4,9 +4,9 @@ import { Observable, of, throwError } from 'rxjs';
 import { User } from '../model/User';
 import { Role } from '../model/Role';
 const users: User[] = [
-    { id: 1, userName: 'admin', password: 'admin', firstName: 'Admin', lastName: 'User', role: Role.Admin },
-    { id: 2, userName: 'aelaf', password: 'ted', firstName: 'aelaf', lastName: 'ted', role: Role.Admin },
-    { id: 3, userName: 'dave', password: 'deva', firstName: 'dave', lastName: 'deva', role: Role.User }
+    { id: 1, userName: 'admin', password: 'admin', firstName: 'Admin', lastName: 'User', role: Role.Admin, token: '' },
+    { id: 2, userName: 'aelaf', password: 'ted', firstName: 'aelaf', lastName: 'ted', role: Role.Admin, token: '' },
+    { id: 3, userName: 'dave', password: 'deva', firstName: 'dave', lastName: 'deva', role: Role.User, token: '' }
 ];
 @Injectable()
 export class FakeBackEnd implements HttpInterceptor {

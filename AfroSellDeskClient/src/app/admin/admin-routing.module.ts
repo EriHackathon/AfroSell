@@ -5,13 +5,15 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { RouteGuard } from '../guards/RouteGuard';
 import { Role } from '../model/Role';
+import { ProfileComponent } from '../components/profile/profile.component';
 
 const routes: Routes = [
     { path: 'admin', component: AdminComponent, canActivate: [RouteGuard],
     data: { roles: [Role.Admin] },
     children: [
              { path: 'productAdd', component: ProductAddComponent},
-             { path: 'list', component: ProductListComponent}
+             { path: 'list', component: ProductListComponent},
+             { path: 'profile', component: ProfileComponent}
             ]
 }
   ];

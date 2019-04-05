@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../model/User';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 const httpOptions = {
     headers: new HttpHeaders({
@@ -12,31 +13,17 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class AuthenticationService {
   private isLoggedIn = false;
-    private users: User[] = [
-        new User('aelaf', 'ted'),
-        new User('dave', 'deva')
-       ];
+   
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private router: Router) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
     }
-    public  isUserAuthentic(fName: string, lName: string): Observable<boolean> {
 
-        return from([this.users]).pipe(map(data => {
-            const user = data.find(d => (d.firstName === fName) && (d.lastName === lName));
-            if (user) {
-                this.isLoggedIn = true;
-            } else {
-                this.isLoggedIn = false;
-            }
-            return this.isLoggedIn;
-        }));
-    }
     public makeUserAuthentic(userx: User): Observable<any> {
 
         return this.http.post<any>('http://localhost:3300/users/authenticate', userx, httpOptions).
@@ -56,6 +43,12 @@ export class AuthenticationService {
         return this.isLoggedIn;
     }
     login(user: User) {
+
+    }
+    public logOut(){
+        localStorage.removeItem('currentUser');
+        this.currentUserSubject.next(null);
+        this.router.navigateByUrl('/signIn');
 
     }
 }

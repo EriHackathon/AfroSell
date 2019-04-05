@@ -7,12 +7,14 @@ import {HomeComponent} from './components/home/home.component';
 import {RouteGuard} from './guards/RouteGuard';
 import {ProductListComponent} from './components/product-list/product-list.component';
 import { Role } from './model/Role';
+import { ProfileComponent } from './components/profile/profile.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [RouteGuard],
   data: {roles: [Role.User]},
    children: [
       { path: '', component: ProductListComponent},
-      { path: 'product-detail/:id', component: ProductDetailComponent}
+      { path: 'product-detail/:id', component: ProductDetailComponent},
+      { path: 'profile', component: ProfileComponent}
 
     ]
 

@@ -30,6 +30,7 @@ private return = '';
     // user is not logged in
     if ( !this.auth.isUserLoggedIn) {
       // do we really need this?!
+      //removing logged user
     }
     });
   }
