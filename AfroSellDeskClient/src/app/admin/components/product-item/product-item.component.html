@@ -1,14 +1,14 @@
 <div class="panel panel-default col-md-4 {{ productItem }} ">
-  <mat-card   [routerLink]="['/product-detail',productItem.productId]">
+  <mat-card   class="product-item">
    
-    <mat-card-header class="product-item">
+    <mat-card-header [routerLink]="['/admin/product-detail',productItem.productId]">
       <mat-card-title>
           <div #nameId>
               {{ productItem.productName }}
             </div>
       </mat-card-title>
     </mat-card-header>
-  <mat-card-content class="product-item">
+  <mat-card-content >
 
   <br>
   price:

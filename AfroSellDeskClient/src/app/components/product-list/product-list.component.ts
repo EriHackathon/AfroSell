@@ -30,7 +30,7 @@ productListError = false;
 
   }
   goToDetail(product: Product){
-    console.log('event from list...to detail')
+    console.log('event from list...to detail');
   }
 
 }
