@@ -1,7 +1,7 @@
 <div class="panel panel-default col-md-4 {{ productItem }} ">
-  <mat-card class="product-item" (click)="goDetatil(productItem)" [routerLink]="['/product-detail',productItem.productId]">
+  <mat-card class="product-item" >
    
-    <mat-card-header>
+    <mat-card-header (click)="goDetatil(productItem)" [routerLink]="['/product-detail',productItem.productId]">
       <mat-card-title>
           <div #nameId>
               {{ productItem.productName }}

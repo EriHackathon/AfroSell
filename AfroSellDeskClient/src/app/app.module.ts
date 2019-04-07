@@ -54,13 +54,12 @@ import { JwtInterceptor } from './guards/JwtInterceptor';
     ServiceModule
   ],
   providers: [
-    {
+       {
       provide: HTTP_INTERCEPTORS,
       useClass: FakeBackEnd,
       multi: true
       },
-      { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-     RouteGuard,
+          RouteGuard,
     ProductService
   ],
   bootstrap: [AppComponent]

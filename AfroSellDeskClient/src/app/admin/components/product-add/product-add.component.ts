@@ -66,9 +66,9 @@ if (this.addEdit) {
 } else {
   this.prodService.addProduct(this.formProduct.value).subscribe( res => {
     console.log('done adding');
-    this.addResult = 'done adding';
+    this.addResult = 'done adding...';
   }, err => {
-    console.log('can not add');
+    console.log('can not add' + err.error.error);
     this.formProduct.setErrors({
       error: true
     });

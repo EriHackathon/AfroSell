@@ -25,12 +25,11 @@ export class FakeBackEnd implements HttpInterceptor {
             firstName: user.firstName,
             lastName: user.lastName,
             role: user.role,
-            token: `fake-jwt-token.${user.role}`
+            token: 'fake-jwt-token.${user.role}'
         });
-        } else {
-            console.log('getting..');
         }
-        return next.handle(request);
+        console.log('non fake auth job');
+        return next.handle(req);
           // private helper functions
 
         function ok(body) {
