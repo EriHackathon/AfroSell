@@ -59,7 +59,7 @@ public class ProductController {
         catch(Exception ex) {
             throw new ProductNotFoundException("Product is not Added");
         }
-        return new ResponseEntity<>("Product are Added",HttpStatus.OK);
+        return new ResponseEntity<>(pro,HttpStatus.OK);
 
 
     }
@@ -80,7 +80,7 @@ public class ProductController {
         catch(Exception ex) {
             throw new ProductNotFoundException("Product cant be Updated");
         }
-        return new ResponseEntity<>("Product updated Successfully ",HttpStatus.OK);
+        return new ResponseEntity<>(pro,HttpStatus.OK);
     }
 
     /*
@@ -95,7 +95,7 @@ public class ProductController {
         }catch(Exception ex) {
             throw new ProductNotFoundException("The Id is not Associated with any Product");
         }
-        return new ResponseEntity<>("Product is deleted",HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
 
 
     }
