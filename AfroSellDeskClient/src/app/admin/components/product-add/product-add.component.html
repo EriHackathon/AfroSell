@@ -1,0 +1,78 @@
+<form [formGroup] ="formProduct" (ngSubmit)="onSubmit()" class="form-class">
+<mat-card class="product-card">
+  <mat-card-header>  
+    <mat-card-title>Product Form</mat-card-title>
+  </mat-card-header>
+  <mat-error *ngIf="formProduct.errors">Error on Submit</mat-error>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="partial-width">
+          <input matInput  placeholder="Product Name" formControlName="productName">
+                <mat-error *ngIf="formProduct.controls['productName'].hasError('required')">
+                   Product Name is <strong>required</strong>
+         
+              </mat-error>
+         
+          </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <mat-form-field class="partial-width">
+            <input matInput placeholder="Product Category"  formControlName="productCategory">
+            <mat-error *ngIf="formProduct.controls['productCategory'].hasError('required')">
+                Product Category is <strong>required</strong>
+               
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Product Type"  formControlName="productType">
+              <mat-error *ngIf="formProduct.controls['productType'].hasError('required')">
+                  Product Type is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Product Image"  formControlName="productImage">
+              <mat-error *ngIf="formProduct.controls['productImage'].hasError('required')">
+                  Product Image is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <mat-form-field class="partial-width">
+                <input matInput placeholder="Product Price" type="number"  formControlName="price">
+                <mat-error *ngIf="formProduct.controls['price'].hasError('required')">
+                    Product Price is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <mat-form-field class="partial-width">
+                  <textarea matInput placeholder="Product Description"  formControlName="productDiscription"></textarea>
+                  <mat-error *ngIf="formProduct.controls['productDiscription'].hasError('required')">
+                      Product Description is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="formProduct.invalid">Submit</button>
+      </mat-card-actions>
+  </mat-card>
+</form>

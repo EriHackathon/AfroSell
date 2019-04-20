@@ -4,4 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_product">ProductActivity</string>
     <string name="title_activity_product_add">ProductAddActivity</string>
+
+    <string name="button_add">Add</string>
+    <string name="button_edit">Update</string>
 </resources>

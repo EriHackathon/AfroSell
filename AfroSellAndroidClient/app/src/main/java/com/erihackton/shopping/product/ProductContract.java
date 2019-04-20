@@ -13,14 +13,19 @@ import java.util.List;
 public interface ProductContract {
     interface Presenter extends BasePresenter{
         void getProducts();
-        void addProduct(Product product);
-        void updateProduct(int id);
+
+
+        void deleteProduct(int id);
 
     }
     interface View extends BaseView<Presenter>{
         void showListofProducts(List<Product> productList);
         void showNoProducts();
-        void showAddProduct();
-        void showUpdateProduct();
+        void showAddProduct(Product product);
+        void showNoAddProduct();
+        void showUpdateProduct(Product product);
+        void showNoUpdateProduct();
+        void showDeleteProduct(int id);
+        void showNoDeleteProduct();
     }
 }

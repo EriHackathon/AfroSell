@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" >
+    <span>MY Admin Page</span>
+    <mat-nav-list>
+      
+      
+        <button mat-button  [routerLink]="['/']">Home</button>
+        <button mat-button [routerLink]="['productAdd']">Add</button>
+        <button mat-button [routerLink]="['list']">ProductList</button>
+          <button mat-button  [routerLink]="['/signUp']">Sign Up</button>
+            <button mat-button [routerLink]="['/signIn']">Sign In</button>
+            <span class="space"></span>
+            <button mat-button [matMenuTriggerFor]="menu">{{ userName }} - Admin</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item [routerLink]="['/admin/profile']">Profile</button>
+              <button mat-menu-item (click)="logOut()">Log Out</button>
+            </mat-menu>
+        
+      </mat-nav-list>
+  </mat-toolbar>
+Admin page
+<router-outlet></router-outlet>

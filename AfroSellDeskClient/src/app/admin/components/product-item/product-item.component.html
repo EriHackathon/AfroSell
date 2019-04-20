@@ -1,0 +1,28 @@
+<div class="panel panel-default col-md-4 {{ productItem }} ">
+  <mat-card   class="product-item">
+   
+    <mat-card-header [routerLink]="['/admin/product-detail',productItem.productId]">
+      <mat-card-title>
+          <div #nameId>
+              {{ productItem.productName }}
+            </div>
+      </mat-card-title>
+    </mat-card-header>
+  <mat-card-content >
+
+  <br>
+  price:
+    {{ productItem.price | currency }}
+  <br>
+  product Type:
+  {{ productItem.productType }}
+  
+  <mat-card-actions class="mat-card-actions" [routerLink]="[]">
+    <button mat-button (click)="delete(productItem)">Delete</button>
+    <button mat-button (click)="edit(productItem)">Edit</button>
+  </mat-card-actions>
+
+</mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>
+</div>

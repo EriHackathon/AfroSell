@@ -1,5 +1,7 @@
 package com.erihackton.shopping.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 
@@ -8,11 +10,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
+import okhttp3.ResponseBody;
+
 /**
  * Created by aelaf on 2/5/19.
  */
 
-public class Product {
+public class Product implements Parcelable {
 
     private int productId;
     private String productName;
@@ -111,4 +115,48 @@ public class Product {
     public void setmRank(Rank mRank) {
         this.mRank = mRank;
     }*/
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.productId);
+        dest.writeString(this.productName);
+        dest.writeString(this.productCategory);
+        dest.writeString(this.productType);
+        dest.writeDouble(this.price);
+        dest.writeString(this.productImage);
+        dest.writeString(this.productDiscription);
+        dest.writeLong(this.dateCreated != null ? this.dateCreated.getTime() : -1);
+        dest.writeLong(this.dateDeleted != null ? this.dateDeleted.getTime() : -1);
+    }
+
+    protected Product(Parcel in) {
+        this.productId = in.readInt();
+        this.productName = in.readString();
+        this.productCategory = in.readString();
+        this.productType = in.readString();
+        this.price = in.readDouble();
+        this.productImage = in.readString();
+        this.productDiscription = in.readString();
+        long tmpDateCreated = in.readLong();
+        this.dateCreated = tmpDateCreated == -1 ? null : new Date(tmpDateCreated);
+        long tmpDateDeleted = in.readLong();
+        this.dateDeleted = tmpDateDeleted == -1 ? null : new Date(tmpDateDeleted);
+    }
+
+    public static final Parcelable.Creator<Product> CREATOR = new Parcelable.Creator<Product>() {
+        @Override
+        public Product createFromParcel(Parcel source) {
+            return new Product(source);
+        }
+
+        @Override
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
 }

@@ -1,5 +1,5 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -11,6 +11,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
+    "watch": true,
     "typeRoots": [
       "node_modules/@types"
     ],

@@ -1,0 +1,28 @@
+<div class="panel panel-default col-md-4 {{ productItem }} ">
+  <mat-card class="product-item" >
+   
+    <mat-card-header (click)="goDetatil(productItem)" [routerLink]="['/product-detail',productItem.productId]">
+      <mat-card-title>
+          <div #nameId>
+              {{ productItem.productName }}
+            </div>
+      </mat-card-title>
+    </mat-card-header>
+  <mat-card-content>
+
+  <br>
+  price:
+    {{ productItem.price | currency }}
+  <br>
+  product Type:
+  {{ productItem.productType }}
+  
+  <mat-card-actions class="mat-card-actions" [routerLink]="[]">
+   
+    <button mat-button (click)="addCart(productItem)">Add To Card</button>
+  </mat-card-actions>
+
+</mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>
+</div>

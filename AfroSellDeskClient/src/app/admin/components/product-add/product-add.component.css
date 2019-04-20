@@ -1,0 +1,40 @@
+/* input.ng-invalid.ng-touched{
+border: 1.5px solid red;
+} */
+
+.form-class{
+  margin: 40px auto;
+  margin-left: 25%;
+  margin-right: 30%;
+  margin-bottom: 3%;
+}
+
+.partial-width {
+    width: 50%;
+  }
+  
+  .product-card {
+    min-width: 100px;
+    margin: 15px auto;
+    margin-left: 3% auto;
+  }
+  
+  .mat-radio-button {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 15px;
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }
+  

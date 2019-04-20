@@ -71,13 +71,13 @@ public class CustomProductAdaptor extends RecyclerView.Adapter<CustomProductAdap
             itemView.setTag(itemView);
             //name.setTag
             //tagging
-            itemView.setOnClickListener(new View.OnClickListener() {
+           /* itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (recyclerClickedListener != null)
                         recyclerClickedListener.onClick(itemView, getAdapterPosition());
                 }
-            });
+            });*/
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
 
                 @Override
