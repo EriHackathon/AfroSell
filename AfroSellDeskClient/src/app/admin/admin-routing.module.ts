@@ -7,6 +7,7 @@ import { RouteGuard } from '../guards/RouteGuard';
 import { Role } from '../model/Role';
 import { ProfileComponent } from '../components/profile/profile.component';
 import { ProductDetailComponent } from '../components/product-detail/product-detail.component';
+import { SignUpComponent } from '../components/sign-up/sign-up.component';
 
 const routes: Routes = [
     { path: 'admin', component: AdminComponent, canActivate: [RouteGuard],
@@ -15,6 +16,7 @@ const routes: Routes = [
              { path: 'productAdd', component: ProductAddComponent},
              { path: 'list', component: ProductListComponent},
              { path: 'product-detail/:id', component: ProductDetailComponent},
+             { path: 'signUp', component: SignUpComponent},
              { path: 'profile', component: ProfileComponent}
             ]
 }

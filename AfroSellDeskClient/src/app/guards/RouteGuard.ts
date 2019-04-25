@@ -11,7 +11,7 @@ export class RouteGuard implements CanActivate {
 
     }
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean  {
       const currentUser = this.auth.currentUserValue;
       console.log(currentUser);
       if (currentUser) {

@@ -19,14 +19,12 @@ const routes: Routes = [
     ]
 
 },
+{ path: 'signUp', component: SignUpComponent},
 {
   path: 'signIn',
   component: SignInComponent
-},
-{
-  path: 'signUp',
-  component: SignUpComponent
 }
+
 ];
 export const routeRoutedComponents = [
   HomeComponent

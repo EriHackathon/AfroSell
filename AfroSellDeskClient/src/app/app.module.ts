@@ -28,6 +28,7 @@ import { ProductAddComponent } from './admin/components/product-add/product-add.
 import { FakeBackEnd } from './helpers/fake-back-end';
 import { ProfileComponent } from './components/profile/profile.component';
 import { JwtInterceptor } from './guards/JwtInterceptor';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { JwtInterceptor } from './guards/JwtInterceptor';
       SignInComponent,
       SignUpComponent,
       HomeComponent,
-      ProfileComponent
+      ProfileComponent,
+      WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,7 @@ import { JwtInterceptor } from './guards/JwtInterceptor';
       useClass: FakeBackEnd,
       multi: true
       },
-          RouteGuard,
+        RouteGuard,
     ProductService
   ],
   bootstrap: [AppComponent]

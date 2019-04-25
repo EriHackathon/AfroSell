@@ -15,4 +15,9 @@ export class HomeComponent implements OnInit {
 goToDetail(product: Product) {
   console.log(product.productName + 'from home');
 }
+signUp(): void {
+  console.log('to sign up');
+  
+
+}
 }

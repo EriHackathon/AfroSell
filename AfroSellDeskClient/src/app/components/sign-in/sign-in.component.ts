@@ -56,4 +56,12 @@ private return = '';
    console.log(this.formSignIn.value.userName);
   }
 
+  signUp(): void {
+    console.log('to sign up'+this.router.url);
+    this.router.parseUrl('/signUp') ;
+   // this.router.navigateByUrl(this.router.url);
+    this.router.createUrlTree(['/signUp']);
+    this.router.navigateByUrl('/signUp');
+
+  }
 }
