@@ -8,23 +8,32 @@ import {RouteGuard} from './guards/RouteGuard';
 import {ProductListComponent} from './components/product-list/product-list.component';
 import { Role } from './model/Role';
 import { ProfileComponent } from './components/profile/profile.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { RegisterComponent } from './components/register/register.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [RouteGuard],
+  { path: '', component: WelcomeComponent},
+  { path: 'signUp', component: SignUpComponent},
+  {path: 'register', component: RegisterComponent},
+  { path: 'home', component: HomeComponent, canActivate: [RouteGuard],
   data: {roles: [Role.User]},
    children: [
       { path: '', component: ProductListComponent},
       { path: 'product-detail/:id', component: ProductDetailComponent},
       { path: 'profile', component: ProfileComponent}
-
+      ,
+      {
+        path: 'signIn',
+        component: SignInComponent
+      }
     ]
 
 },
-{ path: 'signUp', component: SignUpComponent},
+
+
 {
   path: 'signIn',
   component: SignInComponent
 }
-
 ];
 export const routeRoutedComponents = [
   HomeComponent

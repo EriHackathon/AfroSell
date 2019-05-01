@@ -1,0 +1,64 @@
+<p>
+  register works!
+</p>
+<form [formGroup] ="formSignUp" (ngSubmit)="onSignUp()" class="form-class">
+  <mat-card class="signUp-card">
+    <mat-card-header>  
+      <mat-card-title>Registration Form</mat-card-title>
+    </mat-card-header>
+    <!-- <mat-error *ngIf="formSignUp.errors">Error on SignUp</mat-error> -->
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="partial-width">
+            <input matInput  placeholder="First Name" formControlName="firstName">
+            
+            <mat-error *ngIf="formSignUp.controls['firstName'].hasError('required')">
+           
+               <div *ngIf="formSignUp.get('firstName').errors.required"> First Name is <strong>required</strong></div>
+               
+                </mat-error>
+           
+            </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <mat-form-field class="partial-width">
+              <input matInput placeholder="Last Name"  formControlName="lastName">
+              <mat-error *ngIf="formSignUp.controls['lastName'].hasError('required')">
+                  Last Name is <strong>required</strong>
+                 
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+              <mat-form-field class="partial-width">
+                <input matInput placeholder="Phone"  formControlName="phone">
+                <mat-error *ngIf="formSignUp.controls['phone'].hasError('required')">
+                    Phone is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col">
+              <mat-form-field class="partial-width">
+                <input matInput placeholder="Country"  formControlName="country">
+                <mat-error *ngIf="formSignUp.controls['country'].hasError('required')">
+                    Country is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+          <button mat-raised-button color="primary" [disabled]="formSignUp.invalid">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+  </form>

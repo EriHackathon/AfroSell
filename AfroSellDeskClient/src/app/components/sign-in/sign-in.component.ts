@@ -5,7 +5,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { first } from 'rxjs/operators';
 @Component({
-  // selector: 'app-sign-in',
+   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
@@ -26,7 +26,7 @@ private return = '';
     this.return = x.return || '/';
     this.ps.addEdit = true;
     console.log('going back' + this.return);
-    this.router.navigateByUrl(this.return);
+    // this.router.navigateByUrl(this.return);
     // user is not logged in
     if ( !this.auth.isUserLoggedIn) {
       // do we really need this?!
@@ -40,7 +40,7 @@ private return = '';
    this.auth.makeUserAuthentic(this.formSignIn.value).pipe(first()).subscribe(user => {
     if (user && user.role) {
       if (user.role === 'User') {
-        this.return = '/';
+        this.return = '/home';
       } else {
         this.return = '/admin';
       }
@@ -56,12 +56,9 @@ private return = '';
    console.log(this.formSignIn.value.userName);
   }
 
-  signUp(): void {
-    console.log('to sign up'+this.router.url);
-    this.router.parseUrl('/signUp') ;
-   // this.router.navigateByUrl(this.router.url);
-    this.router.createUrlTree(['/signUp']);
-    this.router.navigateByUrl('/signUp');
+  // signUp(): void {
+   
+  //   this.router.navigateByUrl('/signUp');
 
-  }
+  // }
 }

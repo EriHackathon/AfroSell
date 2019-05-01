@@ -29,6 +29,7 @@ import { FakeBackEnd } from './helpers/fake-back-end';
 import { ProfileComponent } from './components/profile/profile.component';
 import { JwtInterceptor } from './guards/JwtInterceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
       SignUpComponent,
       HomeComponent,
       ProfileComponent,
-      WelcomeComponent
+      WelcomeComponent,
+      RegisterComponent
   ],
   imports: [
     BrowserModule,

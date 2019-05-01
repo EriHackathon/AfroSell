@@ -48,7 +48,7 @@ export class AuthenticationService {
     public logOut(){
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
-        this.router.navigateByUrl('/signIn');
+        this.router.navigateByUrl('/');
 
     }
 }
